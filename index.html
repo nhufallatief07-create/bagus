@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Biodata - Muhammad Eka Bagus Prasetyo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(-45deg, #1a1a1a, #00416A, #2E8B57, #800000);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      color: #f0f0f0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      overflow: hidden;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Opening screen */
+    .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      animation: fadeOut 1s ease 2.5s forwards;
+    }
+
+    .preloader h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      color: #d4af37;
+      opacity: 0;
+      animation: fadeIn 1.2s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    .main-content {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: contentFadeIn 1s ease-out 3s forwards;
+    }
+
+    @keyframes contentFadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .container {
+      display: flex;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 20px;
+      overflow: hidden;
+      max-width: 880px;
+      width: 100%;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+    }
+
+    .left {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .left img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #d4af37;
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .left img:hover {
+      transform: scale(1.05);
+    }
+
+    .right {
+      flex: 2;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .right h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      color: #d4af37;
+      margin-bottom: 10px;
+    }
+
+    .right p.subtitle {
+      font-size: 15px;
+      color: #ccc;
+      margin-bottom: 25px;
+    }
+
+    .info-item {
+      margin-bottom: 18px;
+    }
+
+    .label {
+      font-weight: 600;
+      color: #aaa;
+      font-size: 13px;
+    }
+
+    .value {
+      font-size: 15px;
+      color: #f0f0f0;
+      margin-top: 4px;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #999;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left, .right {
+        padding: 30px;
+        text-align: center;
+      }
+
+      .left img {
+        width: 160px;
+        height: 160px;
+      }
+
+      .right h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Opening animation -->
+  <div class="preloader">
+    <h1>Selamat Datang</h1>
+  </div>
+
+  <!-- Konten utama -->
+  <div class="main-content">
+    <div class="container">
+      <div class="left">
+        <img src="tyo.jpeg" alt="Foto Muhammad Eka Bagus Prasetyo">
+      </div>
+      <div class="right">
+        <h1>Muhammad Eka Bagus Prasetyo</h1>
+        <p class="subtitle">Siswa SMKN 3 Jombang</p>
+
+        <div class="info-item">
+          <div class="label">Tempat, Tanggal Lahir</div>
+          <div class="value">Sengon Jombang, 14 Agustus 2008</div>
+        </div>
+
+        <div class="info-item">
+          <div class="label">Alamat</div>
+          <div class="value">JL Kusuma Bangsa, Gg. Karya Bakti, Sengon, Jombang</div>
+        </div>
+
+        <div class="info-item">
+          <div class="label">Hobi</div>
+          <div class="value">Bersepeda</div>
+        </div>
+
+        <div class="info-item">
+          <div class="label">Nomor HP</div>
+          <div class="value">081931881772</div>
+        </div>
+
+        <div class="info-item">
+          <div class="label">Sekolah</div>
+          <div class="value">SMKN 3 Jombang</div>
+        </div>
+
+        <div class="footer">
+          &copy; 2025 | Biodata Pribadi
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
